@@ -1,3 +1,6 @@
 [submodule "360Prod"]
 	path = 360Prod
 	url = https://github.com/vipulism/360Prod.git
+[submodule "Beutify"]
+	path = Beutify
+	url = https://github.com/vipulism/Beutify.git
