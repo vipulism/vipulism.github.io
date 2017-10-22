@@ -4,3 +4,9 @@
 [submodule "Beutify"]
 	path = Beutify
 	url = https://github.com/vipulism/Beutify.git
+[submodule "Future-calendar"]
+	path = Future-calendar
+	url = https://github.com/vipulism/Future-calendar.git
+[submodule "JavaScriptCart"]
+	path = JavaScriptCart
+	url = https://github.com/vipulism/JavaScriptCart.git
