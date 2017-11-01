@@ -14,7 +14,7 @@
     "frontend",
     "developer"
   ],
-  "author": "Vipul Sharma <vipul.sharma@prodigi.io>",
+  "author": "Vipul Sharma <vipul0809@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vipulism/vipulism.github.io/issues"
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/vipulism/vipulism.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-postcss": "^7.0.0",
+    "gulp-sourcemaps": "^2.6.1"
   }
 }

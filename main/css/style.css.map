@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":";AACA;IACI,UAAU;IACV,OAAO;IACP,mBAAmB;IACnB,4BAA4B;CAC/B","file":"style.css","sourcesContent":["\r\n.spider{\r\n    left: 50%;\r\n    top: 0;\r\n    position: absolute;\r\n    transform: translateX(-50%);\r\n}"]}
