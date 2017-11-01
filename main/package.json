@@ -1,0 +1,27 @@
+{
+  "name": "vipulism.com",
+  "version": "1.2.0",
+  "description": "Web Profile",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipulism/vipulism.github.io.git"
+  },
+  "keywords": [
+    "frontend",
+    "developer"
+  ],
+  "author": "Vipul Sharma <vipul.sharma@prodigi.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vipulism/vipulism.github.io/issues"
+  },
+  "homepage": "https://github.com/vipulism/vipulism.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
