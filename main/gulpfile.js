@@ -7,12 +7,15 @@ var precss = require('precss');
 var syntax = require('postcss-scss');
 var autoprefixer  = require('autoprefixer');
 var short = require('postcss-short');
+var stylelint = require("stylelint");
 var sourcemaps = require('gulp-sourcemaps');
+var watch = require('gulp-watch'); 
 
 var processors = [
     short(),
     autoprefixer(),
     precss(),
+    stylelint()
 ];
 
 gulp.task('css', function () {
@@ -25,5 +28,5 @@ gulp.task('css', function () {
 });
 
 gulp.task('default', function() {
-    // place code for your default task here
+   return gulp.watch('src/**/*.css', ['css']);
   });

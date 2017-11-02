@@ -26,9 +26,11 @@
     "gulp-postcss": "^7.0.0",
     "gulp-scss": "^1.4.0",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-watch": "^4.3.11",
     "postcss-scss": "^1.0.2",
     "postcss-short": "^4.1.0",
-    "precss": "^2.0.0"
+    "precss": "^2.0.0",
+    "stylelint": "^8.2.0"
   },
   "dependencies": {}
 }

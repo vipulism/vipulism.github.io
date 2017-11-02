@@ -1,9 +1,7 @@
-.kal{ background: #000;}
+
 .spider{
     top: 0;
     left: 50%;
     position: absolute;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%)
-}
+ }
 /*# sourceMappingURL=style.css.map */

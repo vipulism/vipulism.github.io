@@ -1,6 +1,4 @@
 
 .spider{
-    position: absolute 0 * * 50%;
-    transform: translateX(-50%);
-    @at-root {.kal{ background: #000;}}
-}
+    position: absolute 0 * * 50%; 
+ }
