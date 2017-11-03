@@ -10,7 +10,8 @@ var short = require('postcss-short');
 var stylelint = require("stylelint");
 var sourcemaps = require('gulp-sourcemaps');
 var watch = require('gulp-watch'); 
-var config = require('./stylelint.config')
+var config = require('./stylelint.config');
+var browserSync = require('browser-sync').create();
 
 var processors = [
     short(),
@@ -19,13 +20,27 @@ var processors = [
     stylelint(config)
 ];
 
+gulp.task('serve', ['css'], function() {
+  
+      browserSync.init({
+          server: "./"
+      });
+  
+      gulp.watch('src/**/*.css', ['css']);
+      // gulp.watch("app/*.html").on('change', browserSync.reload);
+  });
+
+
+
+
 gulp.task('css', function () {
   
   return gulp.src('src/postcss/*.css')
      .pipe( sourcemaps.init())
      .pipe( postcss(processors))
      .pipe( sourcemaps.write('.'))
-     .pipe( gulp.dest('css/'));
+     .pipe( gulp.dest('css/'))
+     .pipe(browserSync.stream());
 });
 
 gulp.task('default', function() {
