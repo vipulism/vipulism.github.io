@@ -10,12 +10,13 @@ var short = require('postcss-short');
 var stylelint = require("stylelint");
 var sourcemaps = require('gulp-sourcemaps');
 var watch = require('gulp-watch'); 
+var config = require('./stylelint.config')
 
 var processors = [
     short(),
     autoprefixer(),
     precss(),
-    stylelint()
+    stylelint(config)
 ];
 
 gulp.task('css', function () {
