@@ -1,0 +1,31 @@
+{
+  "name": "vipulism.com",
+  "version": "2.0.0",
+  "description": "Online Profile",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipulism/vipulism.github.io.git"
+  },
+  "keywords": [
+    "Frontend",
+    "Developer",
+    "vipulism",
+    "Javascript",
+    "webpack",
+    "animation"
+  ],
+  "author": "Vipul Sharma <vipul.sharma@prodigi.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vipulism/vipulism.github.io/issues"
+  },
+  "homepage": "https://github.com/vipulism/vipulism.github.io#readme",
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
+}

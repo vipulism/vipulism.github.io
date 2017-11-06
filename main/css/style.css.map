@@ -1,1 +1,1 @@
-{"version":3,"sources":["style.css"],"names":[],"mappings":";AACA;IACI,OAA6B;IAA7B,UAA6B;IAA7B,mBAA6B;EAC/B;AACF,MAAM,gBAAgB,CAAC","file":"style.css","sourcesContent":["\r\n.spider{\r\n    position: absolute 0 * * 50%; \r\n }\r\nbody{ background: #ff0}"]}
+{"version":3,"sources":["style.css"],"names":[],"mappings":";IACI,MAAM,gBAAgB,CAAC;AAC3B;IACI,OAA6B;IAA7B,UAA6B;IAA7B,mBAA6B;EAC/B","file":"style.css","sourcesContent":["\r\n    body{ background: #f0f}\r\n.spider{\r\n    position: absolute 0 * * 50%; \r\n }"]}
