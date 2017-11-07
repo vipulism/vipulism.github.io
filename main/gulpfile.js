@@ -20,10 +20,12 @@ var processors = [
     stylelint(config)
 ];
 
+
+
 gulp.task('serve', ['css'], function() {
   
       browserSync.init({
-          server: "./"
+          server: "./dest"
       });
   
       gulp.watch('src/**/*.css', ['css']);
@@ -39,7 +41,7 @@ gulp.task('css', function () {
      .pipe( sourcemaps.init())
      .pipe( postcss(processors))
      .pipe( sourcemaps.write('.'))
-     .pipe( gulp.dest('css/'))
+     .pipe( gulp.dest('dest/css/'))
      .pipe(browserSync.stream());
 });
 

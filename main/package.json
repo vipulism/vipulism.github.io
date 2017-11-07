@@ -4,7 +4,7 @@
   "description": "Web Profile",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp serve"
+    "dev": "gulp serve"
   },
   "repository": {
     "type": "git",
