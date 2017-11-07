@@ -1,10 +1,45 @@
 
-    body{ background: #ff0;
-        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);}
-.spider{
-    position: absolute 0 * * 50%; 
-    transform:translateX(-50%);
-    color: #fff;
-    font-weight: bold;
-    font-size: 20px;
- }
+
+@import "spider";  
+
+body{ background: #ff0;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+
+ @keyframes bounceInDown {
+    from, 60%, 75%, 90%, to {
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translate3d(0, 25px, 0);
+    }
+  
+    75% {
+      transform: translate3d(0, -10px, 0);
+    }
+  
+    90% {
+      transform: translate3d(0, 5px, 0);
+    }
+  
+    to {
+      transform: none;
+    }
+  }
+  
+  .bounceInDown {
+    animation-name: bounceInDown;
+  }
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  

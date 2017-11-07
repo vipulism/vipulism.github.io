@@ -14,10 +14,11 @@ var config = require('./stylelint.config');
 var browserSync = require('browser-sync').create();
 
 var processors = [
+    // cssImport(),
     short(),
     autoprefixer(),
     precss(),
-    stylelint(config)
+    stylelint(config),
 ];
 
 
@@ -37,7 +38,7 @@ gulp.task('serve', ['css'], function() {
 
 gulp.task('css', function () {
   
-  return gulp.src('src/postcss/*.css')
+  return gulp.src('src/postcss/style.css')
      .pipe( sourcemaps.init())
      .pipe( postcss(processors))
      .pipe( sourcemaps.write('.'))
