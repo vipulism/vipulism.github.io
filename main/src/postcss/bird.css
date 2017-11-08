@@ -1,0 +1,97 @@
+.bird{
+    position: absolute 280px * * 50%;  
+    transform:translateX(-50%);
+    font-weight: bold;
+    font-size: 10px;
+    animation-duration: 2s; /* for drop */
+
+}
+
+.bird--small{
+    transform: translateX(-50%) scale(.5);
+    animation: small-move 5s ease-in-out forwards;
+} 
+
+
+ .bird-container {
+    cursor: pointer;
+    z-index: 998;
+    position: absolute;
+    animation: bird-inicio 5s ease-in-out forwards;
+} 
+.bird-container::after {
+    z-index: 998;
+    border-radius: 100%;
+    color: $FG;
+    font-size: 1.3em;
+    content: "^"; 
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 7px;
+    width: 25px;
+    height: 25px;
+}
+
+.bird-container::before {
+    z-index: 998;
+    border-radius: 100%;
+    color: $FG;
+    font-size: 1.3em;
+    content: "..oo.."; 
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -2px;
+    width: 25px;
+    height: 25px;
+}
+.bird .left {
+    position: absolute;
+    z-index: 998;
+}
+.bird .right {
+    position: absolute;
+    transform: rotateY(180deg);
+    z-index: 998;
+}
+ 
+.bird .uno {
+    position: relative;
+    width: 20px;
+    z-index: 998;
+    font-weight: bold;
+    height: 3px;
+}
+.bird .uno>.uno  {
+    z-index: 998;
+    transform-origin: 15px top;
+    transform: rotate(-10deg) translateX(20px);
+    animation: bird-seg .6s ease infinite;
+}
+.bird .uno>.uno>.uno {
+    z-index: 998;
+    transform-origin: 20px top;
+    transform: rotate(10deg) translateX(20px);
+    animation: bird-seg .9s ease infinite;
+}
+  
+
+
+@keyframes bird-seg {
+    50% {
+        transform: rotate(25deg) translateX(20px);
+    }
+}
+@keyframes bird-inicio {
+    100% {
+        top: 0%;
+    }
+}
+@keyframes small-move {
+    0% {
+        transform: translate(20px, 20px);
+    }
+
+    100% {
+        transform: translate(120px, 120px);
+    }
+}

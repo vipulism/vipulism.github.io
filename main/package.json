@@ -28,6 +28,7 @@
     "gulp-postcss": "^7.0.0",
     "gulp-scss": "^1.4.0",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-strip-css-comments": "^1.2.0",
     "gulp-watch": "^4.3.11",
     "postcss-partial-import": "^4.1.0",
     "postcss-scss": "^1.0.2",
@@ -35,5 +36,7 @@
     "precss": "^2.0.0",
     "stylelint": "^8.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
 }

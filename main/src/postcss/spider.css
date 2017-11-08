@@ -1,7 +1,105 @@
 .spider{
-    position: absolute 0 * * 50%; 
+    position: absolute 80px * * 50%;  
     transform:translateX(-50%);
-    color: #fff;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 10px;
+    animation-duration: 2s; /* for drop */
  }
+ .spider .container {
+    cursor: pointer;
+    z-index: 998;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    animation: inicio 5s ease-in-out forwards;
+}
+.spider .container::after {
+    background: rgba(0, 0, 0, 0.1);
+    content: " ";
+    position: absolute;
+    top: -1000px;
+    left: 50%;
+    margin-left: 9px;
+    width: 1px;
+    height: 1000px;
+    z-index: 998;
+}
+.spider .container::before {
+    z-index: 998;
+    border-radius: 100%;
+    color: $FG;
+    font-size: 1.3em;
+    content: ".00...";
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -2px;
+    width: 25px;
+    height: 25px;
+}
+.spider .left {
+    position: absolute;
+    z-index: 998;
+}
+.spider .right {
+    position: absolute;
+    transform: rotateY(180deg);
+    z-index: 998;
+}
+
+.uno, .dos, .tres, .cuatro {
+    position: relative;
+    width: 20px;
+    z-index: 998;
+    font-weight: bold;
+    height: 3px;
+}
+.uno>.uno, .dos>.dos, .tres>.tres, .cuatro>.cuatro {
+    z-index: 998;
+    transform-origin: 20px top;
+    transform: rotate(-80deg) translateX(20px);
+    animation: seg 2.5s ease infinite;
+}
+.uno>.uno>.uno, .dos>.dos>.dos, .tres>.tres>.tres, .cuatro>.cuatro>.cuatro {
+    z-index: 998;
+    transform-origin: 20px top;
+    transform: rotate(10deg) translateX(20px);
+    animation: seg 1.5s ease infinite;
+}
+.spider .right>.dos>.dos {
+    animation-delay: 200ms;
+}
+.dos>.dos {
+    animation-delay: 400ms;
+}
+.dos>.dos>.dos {
+    animation-delay: 200ms;
+}
+.spider .right>.tres>.tres {
+    animation-delay: 400ms;
+}
+.tres>.tres {
+    animation-delay: 600ms;
+}
+.tres>.tres>.tres {
+    animation-delay: 300ms;
+}
+.spider .right>.cuatro>.cuatro {
+    animation-delay: 100ms;
+}
+.cuatro>.cuatro {
+    animation-delay: 800ms;
+}
+.cuatro>.cuatro>.cuatro {
+    animation-delay: 400ms;
+}
+
+@keyframes seg {
+    50% {
+        transform: rotate(55deg) translateX(20px);
+    }
+}
+@keyframes inicio {
+    100% {
+        top: 15%;
+    }
+}

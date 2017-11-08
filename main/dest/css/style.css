@@ -1,94 +1,331 @@
-.spider{
-    position: absolute 0 * * 50%; 
-    transform:translateX(-50%);
-    color: #fff;
-    font-weight: bold;
-    font-size: 20px;
- }  
-
-body{ background: #ff0;
+  body{ background: $bg;
     background-image: -webkit-gradient(linear, left top, right top, from(#4facfe), to(#00f2fe));
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  } @-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+            transform: none;
+  }
+} @keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+            transform: none;
+  }
+} .bounceInDown {
+  -webkit-animation-name: bounceInDown;
+          animation-name: bounceInDown;
+} @-webkit-keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+} @keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+} .shake {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+}  .spider{
+    top: 80px;
+    left: 50%;
+    position: absolute;  
+    -webkit-transform:translateX(-50%);  
+            transform:translateX(-50%);
+    font-weight: 700;
+    font-size: 10px;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s; 
+ } .spider .container {
+    cursor: pointer;
+    z-index: 998;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-animation: inicio 5s ease-in-out forwards;
+            animation: inicio 5s ease-in-out forwards;
+} .spider .container::after {
+    background: rgba(0, 0, 0, 0.1);
+    content: " ";
+    position: absolute;
+    top: -1000px;
+    left: 50%;
+    margin-left: 9px;
+    width: 1px;
+    height: 1000px;
+    z-index: 998;
+} .spider .container::before {
+    z-index: 998;
+    border-radius: 100%;
+    color: #000;
+    font-size: 1.3em;
+    content: ".00...";
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -2px;
+    width: 25px;
+    height: 25px;
+} .spider .left {
+    position: absolute;
+    z-index: 998;
+} .spider .right {
+    position: absolute;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    z-index: 998;
+} .uno, .dos, .tres, .cuatro {
+    position: relative;
+    width: 20px;
+    z-index: 998;
+    font-weight: 700;
+    height: 3px;
+} .uno>.uno, .dos>.dos, .tres>.tres, .cuatro>.cuatro {
+    z-index: 998;
+    -webkit-transform-origin: 20px top;
+            transform-origin: 20px top;
+    -webkit-transform: rotate(-80deg) translateX(20px);
+            transform: rotate(-80deg) translateX(20px);
+    -webkit-animation: seg 2.5s ease infinite;
+            animation: seg 2.5s ease infinite;
+} .uno>.uno>.uno, .dos>.dos>.dos, .tres>.tres>.tres, .cuatro>.cuatro>.cuatro {
+    z-index: 998;
+    -webkit-transform-origin: 20px top;
+            transform-origin: 20px top;
+    -webkit-transform: rotate(10deg) translateX(20px);
+            transform: rotate(10deg) translateX(20px);
+    -webkit-animation: seg 1.5s ease infinite;
+            animation: seg 1.5s ease infinite;
+} .spider .right>.dos>.dos {
+    -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
+} .dos>.dos {
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+} .dos>.dos>.dos {
+    -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
+} .spider .right>.tres>.tres {
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+} .tres>.tres {
+    -webkit-animation-delay: 600ms;
+            animation-delay: 600ms;
+} .tres>.tres>.tres {
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
+} .spider .right>.cuatro>.cuatro {
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+} .cuatro>.cuatro {
+    -webkit-animation-delay: 800ms;
+            animation-delay: 800ms;
+} .cuatro>.cuatro>.cuatro {
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+} @-webkit-keyframes seg {
+    50% {
+        -webkit-transform: rotate(55deg) translateX(20px);
+                transform: rotate(55deg) translateX(20px);
+    }
+} @keyframes seg {
+    50% {
+        -webkit-transform: rotate(55deg) translateX(20px);
+                transform: rotate(55deg) translateX(20px);
+    }
+} @-webkit-keyframes inicio {
+    100% {
+        top: 15%;
+    }
+} @keyframes inicio {
+    100% {
+        top: 15%;
+    }
+} .bird{
+    top: 280px;
+    left: 50%;
+    position: absolute;  
+    -webkit-transform:translateX(-50%);  
+            transform:translateX(-50%);
+    font-weight: 700;
+    font-size: 10px;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s; 
+
+} .bird--small{
+    -webkit-transform: translateX(-50%) scale(.5);
+            transform: translateX(-50%) scale(.5);
+    -webkit-animation: small-move 5s ease-in-out forwards;
+            animation: small-move 5s ease-in-out forwards;
+} .bird-container {
+    cursor: pointer;
+    z-index: 998;
+    position: absolute;
+    -webkit-animation: bird-inicio 5s ease-in-out forwards;
+            animation: bird-inicio 5s ease-in-out forwards;
+} .bird-container::after {
+    z-index: 998;
+    border-radius: 100%;
+    color: #000;
+    font-size: 1.3em;
+    content: "^"; 
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 7px;
+    width: 25px;
+    height: 25px;
+} .bird-container::before {
+    z-index: 998;
+    border-radius: 100%;
+    color: #000;
+    font-size: 1.3em;
+    content: "..oo.."; 
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -2px;
+    width: 25px;
+    height: 25px;
+} .bird .left {
+    position: absolute;
+    z-index: 998;
+} .bird .right {
+    position: absolute;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    z-index: 998;
+} .bird .uno {
+    position: relative;
+    width: 20px;
+    z-index: 998;
+    font-weight: 700;
+    height: 3px;
+} .bird .uno>.uno  {
+    z-index: 998;
+    -webkit-transform-origin: 15px top;
+            transform-origin: 15px top;
+    -webkit-transform: rotate(-10deg) translateX(20px);
+            transform: rotate(-10deg) translateX(20px);
+    -webkit-animation: bird-seg .6s ease infinite;
+            animation: bird-seg .6s ease infinite;
+} .bird .uno>.uno>.uno {
+    z-index: 998;
+    -webkit-transform-origin: 20px top;
+            transform-origin: 20px top;
+    -webkit-transform: rotate(10deg) translateX(20px);
+            transform: rotate(10deg) translateX(20px);
+    -webkit-animation: bird-seg .9s ease infinite;
+            animation: bird-seg .9s ease infinite;
+} @-webkit-keyframes bird-seg {
+    50% {
+        -webkit-transform: rotate(25deg) translateX(20px);
+                transform: rotate(25deg) translateX(20px);
+    }
+} @keyframes bird-seg {
+    50% {
+        -webkit-transform: rotate(25deg) translateX(20px);
+                transform: rotate(25deg) translateX(20px);
+    }
+} @-webkit-keyframes bird-inicio {
+    100% {
+        top: 0%;
+    }
+} @keyframes bird-inicio {
+    100% {
+        top: 0%;
+    }
+} @-webkit-keyframes small-move {
+    0% {
+        -webkit-transform: translate(20px, 20px);
+                transform: translate(20px, 20px);
+    }
+
+    100% {
+        -webkit-transform: translate(120px, 120px);
+                transform: translate(120px, 120px);
+    }
+} @keyframes small-move {
+    0% {
+        -webkit-transform: translate(20px, 20px);
+                transform: translate(20px, 20px);
+    }
+
+    100% {
+        -webkit-transform: translate(120px, 120px);
+                transform: translate(120px, 120px);
+    }
 }  
 
-@-webkit-keyframes bounceInDown {
-    from, 60%, 75%, 90%, to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-              animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-  
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -3000px, 0);
-              transform: translate3d(0, -3000px, 0);
-    }
-  
-    60% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 25px, 0);
-              transform: translate3d(0, 25px, 0);
-    }
-  
-    75% {
-      -webkit-transform: translate3d(0, -10px, 0);
-              transform: translate3d(0, -10px, 0);
-    }
-  
-    90% {
-      -webkit-transform: translate3d(0, 5px, 0);
-              transform: translate3d(0, 5px, 0);
-    }
-  
-    to {
-      -webkit-transform: none;
-              transform: none;
-    }
-  }  
-
-@keyframes bounceInDown {
-    from, 60%, 75%, 90%, to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-              animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-  
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -3000px, 0);
-              transform: translate3d(0, -3000px, 0);
-    }
-  
-    60% {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 25px, 0);
-              transform: translate3d(0, 25px, 0);
-    }
-  
-    75% {
-      -webkit-transform: translate3d(0, -10px, 0);
-              transform: translate3d(0, -10px, 0);
-    }
-  
-    90% {
-      -webkit-transform: translate3d(0, 5px, 0);
-              transform: translate3d(0, 5px, 0);
-    }
-  
-    to {
-      -webkit-transform: none;
-              transform: none;
-    }
-  }  
-
-.bounceInDown {
-    -webkit-animation-name: bounceInDown;
-            animation-name: bounceInDown;
-  }  
-
-.animated {
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-  }
-  
-/*# sourceMappingURL=style.css.map */

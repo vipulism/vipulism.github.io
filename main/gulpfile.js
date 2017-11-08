@@ -12,12 +12,13 @@ var sourcemaps = require('gulp-sourcemaps');
 var watch = require('gulp-watch'); 
 var config = require('./stylelint.config');
 var browserSync = require('browser-sync').create();
+var stripCssComments = require('gulp-strip-css-comments');
+
 
 var processors = [
-    // cssImport(),
+    precss(),
     short(),
     autoprefixer(),
-    precss(),
     stylelint(config),
 ];
 
@@ -42,6 +43,7 @@ gulp.task('css', function () {
      .pipe( sourcemaps.init())
      .pipe( postcss(processors))
      .pipe( sourcemaps.write('.'))
+     .pipe(stripCssComments())
      .pipe( gulp.dest('dest/css/'))
      .pipe(browserSync.stream());
 });
