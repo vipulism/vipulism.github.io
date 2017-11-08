@@ -20,3 +20,5 @@ let bird = `<div class="bird">
 
 let page = document.getElementsByTagName('body')[0];
 page.insertAdjacentHTML('beforeEnd', bird);  
+
+
