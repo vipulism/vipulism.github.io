@@ -1,3 +1,11 @@
-body{ background: $bg;
+html, body{
+  width: 100%;height: 100%;
+  padding: 0;margin: 0;
+  overflow: hidden;
+}
+.wraper{
+  overflow: hidden; 
+  width: 100%;height: 100%;
+  /* background: $bg; */
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-  }
+  } 

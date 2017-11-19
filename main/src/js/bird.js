@@ -1,7 +1,3 @@
-// main js
-let page = document.getElementById('wraper');
-
-
 // bird js
 var birds = (function(){
     const maxBird = 1;
@@ -72,4 +68,3 @@ birds.map((bird, i) => {
     
     
 })
-//# sourceMappingURL=script.js.map

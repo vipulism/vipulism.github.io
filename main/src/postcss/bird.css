@@ -3,7 +3,7 @@
     font-weight: bold;
     font-size: 6px;
     animation-duration: 2s; /* for drop */
-    
+    transform:translate(-100px,-100px);
 }
 
 .bird--small{

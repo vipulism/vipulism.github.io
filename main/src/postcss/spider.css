@@ -5,7 +5,7 @@
     font-size: 10px;
     animation-duration: 2s; /* for drop */
  }
- .spider .container {
+ .spider-container {
     cursor: pointer;
     z-index: 998;
     position: absolute;
@@ -13,7 +13,7 @@
     left: 50%;
     animation: inicio 5s ease-in-out forwards;
 }
-.spider .container::after {
+.spider-container::after {
     background: rgba(0, 0, 0, 0.1);
     content: " ";
     position: absolute;
@@ -24,7 +24,7 @@
     height: 1000px;
     z-index: 998;
 }
-.spider .container::before {
+.spider-container::before {
     z-index: 998;
     border-radius: 100%;
     color: $FG;
