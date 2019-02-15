@@ -103,7 +103,7 @@ $(function() {
         loop:true,
         margin: 30,
         mouseDrag:true,
-        autoplay:true,
+        autoplay:false,
         dots: true,
         responsiveClass:true,
         responsive:{
@@ -114,7 +114,7 @@ $(function() {
                 items:2
             },
             1000:{
-                items:4
+                items:3
             }
         }
     });

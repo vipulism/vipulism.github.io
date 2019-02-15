@@ -134,6 +134,10 @@ a:hover {
 .section-padding {
   padding: 120px 0; }
 
+  .section-padding2{
+    padding: 50px 0;
+  }
+
 .section-head {
   margin-bottom: 80px;
   text-align: center; }
@@ -378,6 +382,9 @@ a:hover {
 .header {
   min-height: 100vh;
   position: relative; }
+  .header.small-hdr{
+    min-height: 60vh;
+  }
   .header.video {
     overflow: hidden; }
   .header .caption .o-hidden {
@@ -1207,6 +1214,8 @@ footer {
   .works .filtering span {
     padding: 5px 15px; } }
 
-
+.reset-width{
+  width: unset !important;
+}
 
 /*# sourceMappingURL=maps/style.css.map */
