@@ -5,27 +5,27 @@ $(document).ready(function(){emitter2=new particle_emitter({image:["images/bug1.
 document.getElementById("contactForm").addEventListener("submit", function(e) {
 	e.preventDefault();
 	
-	// const form = e.target;
-	// const status = document.getElementById("formStatus");
-	// const formData = new FormData(form);
+	const form = e.target;
+	const status = document.getElementById("formStatus");
+	const formData = new FormData(form);
 	
-	// fetch("send-mail.php", {
-	// 	method: "POST",
-	// 	body: formData
-	// })
-	// .then(res => res.text())
-	// .then(data => {
-	// 	if (data === "OK") {
-	// 	status.textContent = "Message sent successfully!";
-	// 	status.className = "status success";
-	// 	form.reset();
-	// 	} else {
-	// 	status.textContent = "Something went wrong. Please try again.";
-	// 	status.className = "status error";
-	// 	}
-	// })
-	// .catch(() => {
-	// 	status.textContent = "Network error. Try again later.";
-	// 	status.className = "status error";
-	// });
+	fetch("send-mail.php", {
+		method: "POST",
+		body: formData
+	})
+	.then(res => res.text())
+	.then(data => {
+		if (data === "OK") {
+		status.textContent = "Message sent successfully!";
+		status.className = "status success";
+		form.reset();
+		} else {
+		status.textContent = "Something went wrong. Please try again.";
+		status.className = "status error";
+		}
+	})
+	.catch(() => {
+		status.textContent = "Network error. Try again later.";
+		status.className = "status error";
+	});
 	});
