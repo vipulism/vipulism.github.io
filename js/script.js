@@ -1,7 +1,7 @@
 $(document).ready(function(){emitter2=new particle_emitter({image:["images/bug1.gif","images/bug2.gif","images/bug3.gif","images/bug4.gif"],center:["0","10"],offset:[0,0],radius:5,size:10,velocity:10,decay:800}),emitter2.start();
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-	e.preventDefault();
+// document.getElementById("contactForm").addEventListener("submit", function(e) {
+// 	e.preventDefault();
 	
 	// const form = e.target;
 	// const status = document.getElementById("formStatus");
@@ -26,7 +26,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 	// 	status.textContent = "Network error. Try again later.";
 	// 	status.className = "status error";
 	// });
-	});
+	// });
 
 
 
