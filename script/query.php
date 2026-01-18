@@ -1,38 +1,31 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo "INVALID";
+    exit;
+}
 
-$name = $_REQUEST['name'];
-$email = $_REQUEST['email'];
-$message=$_REQUEST['message'];
-$ip=$_SERVER['REMOTE_ADDR'];
-$url=$_SERVER['HTTP_REFERER'];
- 	
-$sub="Enquiry Mail from : ".$_POST['email'];
-	 $from=$_POST['email'];
-	 $msg ="From Page  :$url\n\n";
-	 $msg.="Name:$name\n";
-	 $msg.="Email:$email\n";
-	 $msg.="Message:$message\n";
-	 $msg.="Ref Url:$url\n\n";
-	 $msg.="IP   :$ip\n";
-      
+$name    = strip_tags(trim($_POST['name'] ?? ''));
+$email   = filter_var($_POST['email'] ?? '', FILTER_VALIDATE_EMAIL);
+$message = strip_tags(trim($_POST['message'] ?? ''));
 
-   $headers = "From: ${email}\nReply-To: ${email}";
-		
-       
-	mail("vipul0809@gmail.in ", "Enquiry Mail from :vipulism.github.io", "$msg", "From:$email");
-         
-		
-    echo "<script language=\"JavaScript\">\n";
-    echo "<!-- hide from old browser\n\n";
-    
-    echo "function redirect() {\n";
-    echo "window.location = \"" . "http://www.vipulism.github.io/" . "\";\n";
-    echo "}\n\n";
+if (!$name || !$email || !$message) {
+    echo "INVALID";
+    exit;
+}
 
-    echo "timer = setTimeout('redirect()', '" . ($seconds*1000) . "');\n\n";
+$to      = "vipul0809@gmail.in";
+$subject = "Enquiry Mail from vipulism.github.io";
 
-    echo "-->\n";
-    echo "</script>\n"; 
+$body  = "Name: $name\n";
+$body .= "Email: $email\n";
+$body .= "Message: $message\n";
 
+$headers  = "From: $email\r\n";
+$headers .= "Reply-To: $email\r\n";
 
-?>
+if (mail($to, $subject, $body, $headers)) {
+    echo "OK";
+} else {
+    echo "FAIL";
+}
